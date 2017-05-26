@@ -2,8 +2,11 @@
 
 <div class="section" id="top"><!-- Parent section -->
 
-    <div class="container hero {{ if .Site.Params.fadein }} fade-in one {{ end }}"><!-- Begin Title -->
+    <div class="container hero has-text-centered{{ if .Site.Params.fadein }} fade-in one {{ end }}"><!-- Begin Title -->
     <h1 class="bold-title is-1">The bucket list.</h1>
+                    <h3 class="subtitle is-3 fade-in one">
+                {{ .Site.Params.tagline }}
+            </h3>
     </div><!-- End Title -->
 
 <!-- Everything below fades in two! -->
