@@ -1,0 +1,11 @@
+<div class="container">
+    <!-- Begin Projects container -->
+    <h2 class="title is-2 has-text-centered">The List</h2>
+    <div class="columns is-mobile">
+        <div class="column markdown">
+            {{ range .Data.Pages }} {{if eq .Title "The List" }} {{.Content}} {{end}} {{ end }}
+        </div>
+    </div>
+</div>
+<!-- End Projects container -->
+<div class="container has-text-centered top-pad"><a href="#top"><i class="fa fa-arrow-up"></i></a></div>
