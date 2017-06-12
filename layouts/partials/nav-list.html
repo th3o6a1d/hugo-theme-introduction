@@ -9,14 +9,14 @@
       <span class="nav-item">
         <a href="/">Main</a>
       </span>
+      {{ if .Site.Params.showabout }}
       <span class="nav-item">
         <a href="/#about">About</a> 
       </span>
-<!--     {{ if .Site.Params.showprojects }}
+      {{ end }}
       <span class="nav-item">
-        <a href="/thelist">The List</a> 
+        <a href="/#thelist">The List</a> 
       </span>
-    {{ end }} -->
       <span class="nav-item">
         <a href="/#contact">Contact</a>
       </span>

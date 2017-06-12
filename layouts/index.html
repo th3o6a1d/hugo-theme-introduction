@@ -33,8 +33,9 @@
         <div class="hero-foot {{ if .Site.Params.fadein }}{{ end }}">
             <hr>
             <nav class="nav-center">
-                <a class="nav-item" href="#about">About</a> {{ if .Site.Params.showprojects }}
-                <a class="nav-item" href="#thelist">The List</a> {{ end }} {{ if .Site.Params.showblog }}
+                {{ if .Site.Params.showabout }}
+                <a class="nav-item" href="#about">About</a> {{ end }}
+                <a class="nav-item" href="#thelist">The List</a> {{ if .Site.Params.showblog }}
                 <a class="nav-item" href="#blog">Blog</a> {{ end }}
                 <a class="nav-item" href="#contact">Contact</a>
             </nav>
@@ -46,6 +47,7 @@
 </div>
 <!-- End of top section -->
 <!-- Everything below fades in three! -->
+{{ if .Site.Params.showabout }}
 <div class="section no-padding {{ if .Site.Params.fadein }}{{ end }}">
     <!-- Tell them all about it! -->
     <div class="section" id="about">
@@ -55,7 +57,7 @@
                 <!-- Avatar and about.md side by side except mobile -->
                 <!--             <div class="column is-one-third has-text-centered"><img class="img-responsive avatar" src="/{{ .Site.Params.avatar }}" alt="My profile picture.">
             </div> -->
-<!--                 <div class="column is-one-third has-text-centered"><img class="img-responsive avatar" src="/img/kick-the-bucket3.png" alt="My profile picture.">
+                <!--                 <div class="column is-one-third has-text-centered"><img class="img-responsive avatar" src="/img/kick-the-bucket3.png" alt="My profile picture.">
                 </div> -->
                 <div class="column markdown">
                     {{ range .Data.Pages }} {{if eq .Title "about" }} {{.Content}} {{end}} {{ end }}
@@ -69,6 +71,7 @@
     <div class="container">
         <hr>
     </div>
+    {{end}}
     <!-- Let's show some blog posts -->
     {{ if .Site.Params.showblog }}
     <div class="section" id="blog">
@@ -79,16 +82,12 @@
         <hr>
     </div>
     {{ end }}
-    <!-- Now for some cool projects -->
-    {{ if .Site.Params.showprojects }}
     <div class="section" id="thelist">
         {{ partial "thelist.html" . }}
     </div>
-    <!-- End Projects section -->
     <div class="container">
         <hr>
     </div>
-    {{ end }}
     <!-- Let's chat, shall we? -->
     <div class="section" id="contact">
         <div class="container has-text-centered">
