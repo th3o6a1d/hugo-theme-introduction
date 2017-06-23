@@ -110,7 +110,7 @@ th {
 
 html {
     background-color: #fff;
-    font-size: 16px;
+    font-size: 1em;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     min-width: 300px;
@@ -134,7 +134,7 @@ button,
 input,
 select,
 textarea {
-    font-family: Andale Mono, sans-serif
+    font-family: 'Dosis', sans-serif;
 }
 
 code,
@@ -1583,8 +1583,8 @@ table th {
 
 @media screen and (min-width: 769px) {
     .hero.is-medium .hero-body {
-        padding-bottom: 9rem;
-        padding-top: 9rem
+        padding-bottom: 4rem;
+        padding-top: 4rem
     }
 }
 
@@ -1618,7 +1618,7 @@ table th {
 
 .section {
     background-color: #fff;
-    padding: 3rem 1.5rem
+    padding: 1rem 1rem
 }
 
 @media screen and (min-width: 1000px) {
@@ -5471,8 +5471,8 @@ a.nav-item.is-tab.is-active {
 }
 
 body {
-    font-size: 16px;
-    font-family: Andale Mono, sans-serif;
+    font-size: 1.2rem;
+    font-family: 'Dosis', sans-serif;;
     color: #4a4a4a;
     background-color: #fff
 }
@@ -5545,12 +5545,12 @@ a {
 
 h1 {
     color: #222;
-    font-family: Andale Mono, sans-serif
+    font-family: 'Dosis', sans-serif;
 }
 
 h2 {
     color: #222;
-    font-family: Andale Mono, sans-serif
+    font-family: 'Dosis', sans-serif;
 }
 
 ul {
